@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: #ba0e0e;
+  color: rgb(249, 245, 245);
+}
+
+.nav a.active {
+  background-color: #ba0e0e;
+  color: white;
+}
+
+.navRight {
+    float: right;
+}
+
+.search-container {
+        position: relative;
+        display: flex; /* or use grid */
+        align-items: center;
+        /* Add other styling for the container */
+    }
+    .search-container input {
+        
+        padding: 14px 16px;
+        /* padding: 10px;  */
+    }
+    .search-container i {
+        position: absolute;
+        right: 10px; /* Adjust positioning */
+        /* Add other styling for the icon */
+    }
+
+/* Card View */
+
+.card {
+  /* Add shadows to create the "card" effect */
+  padding: 105px;
+  margin: 45px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+#footer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:rgb(3, 3, 3);
+   color: aliceblue;
+}
