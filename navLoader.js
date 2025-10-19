@@ -6,7 +6,7 @@
 //   $("#navbar-frame").load("navbar.html");
 // });
 
-fetch('D:/Mes cours/Seg/project/navbar.html', {
+fetch('./navbar.html', {
   mode: 'no-cors',
   headers: {
     'Access-Control-Allow-Origin':'*'
