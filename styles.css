@@ -5,17 +5,22 @@ body {
 }
 
 .nav {
+  display: flex;
+  background-color: #f2f2f2;
   overflow: hidden;
+  justify-content: right;
+
   
 }
 
 .nav a {
-  float: left;
+  float: none;
   color: #280462;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  
 }
 
 .nav a:hover {
@@ -24,36 +29,14 @@ body {
 }
 
 .nav a.active {
-  background-color: #ba0e0e;
-  color: white;
+  background-color: none;
+  color: #280462;
 }
 
-.navRight {
-  float: right;
+/*keep logo on the left */
+.nav > a:first-child { 
+  margin-right: auto; 
 }
-
-.search-container {
-  position: relative;
-  display: flex;
-  /* or use grid */
-  align-items: center;
-  /* Add other styling for the container */
-}
-
-.search-container input {
-
-  padding: 14px 16px;
-  /* padding: 10px;  */
-}
-
-.search-container i {
-  position: absolute;
-  right: 10px;
-  /* Adjust positioning */
-  /* Add other styling for the icon */
-}
-
-/* Card View */
 
 .card {
   /* Add shadows to create the "card" effect */
