@@ -85,49 +85,57 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 /* Main section setup*/
 .section-team {
   background-color: #f8f9fb;
   padding: 60px 20px 100px;
   font-family: 'Poppins', sans-serif;
 }
+
 /* "MEET THE TEAM" tittre */
 .team-intro {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .team-intro p {
-  font-size:12px ;
+  font-size: 12px;
   letter-spacing: 0.4em;
   color: #777;
   margin-bottom: 5px;
 }
+
 .team-intro h3 {
   font-size: 28px;
   letter-spacing: 0.3em;
   font-weight: 700;
 }
+
 /*Grid layout*/
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 30px; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
+
 /*Card design*/
-.team-card{
-  background:white;
+.team-card {
+  background: white;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  overflow:hidden;
+  overflow: hidden;
   text-align: center;
-  transition:transfomr 0.2s ease, box-shadow 0.2s ease;
+  transition: transfomr 0.2s ease, box-shadow 0.2s ease;
 }
+
 .team-card:hover {
-  transform:translateY(-5px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
+
 /*End Commentaire style pour ABOUT.HTML*/
 
 
