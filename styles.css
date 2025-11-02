@@ -147,7 +147,13 @@ html {
 
 
 /*Start Commentaire style pour team*/
-
+.meet-the-team  {
+  background-color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /*End Commentaire style pour team*/
 
