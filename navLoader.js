@@ -6,6 +6,7 @@
 //   $("#navbar-frame").load("navbar.html");
 // });
 
+<<<<<<< HEAD
 //Video Home page Js
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
@@ -17,6 +18,12 @@ function myFunction() {
   } else {
     video.pause();
     btn.innerHTML = "Play";
+=======
+fetch('./navbar.html', {
+  mode: 'no-cors',
+  headers: {
+    'Access-Control-Allow-Origin':'*'
+>>>>>>> 8dc4b9c9efe30244d08e8973221f5c4de0641c8e
   }
 }
 // End Video Home page CSS

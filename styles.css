@@ -1,9 +1,11 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to right, #ffff, #A6A6A6);
 }
 
 .nav {
+<<<<<<< HEAD
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -12,15 +14,24 @@ body {
   background-color: linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.96));
   /* border-top:10px solid rgba(255,255,255,0.03); */
   backdrop-filter: blur(170px);
+=======
+  display: flex;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  justify-content: right;
+
+  
+>>>>>>> 8dc4b9c9efe30244d08e8973221f5c4de0641c8e
 }
 
 .nav a {
-  float: left;
-  color: #f2f2f2;
+  float: none;
+  color: #280462;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  
 }
 
 .nav a:hover {
@@ -29,14 +40,16 @@ body {
 }
 
 .nav a.active {
-  background-color: #ba0e0e;
-  color: white;
+  background-color: none;
+  color: #280462;
 }
 
-.navRight {
-    float: right;
+/*keep logo on the left */
+.nav > a:first-child { 
+  margin-right: auto; 
 }
 
+<<<<<<< HEAD
 .search-container {
         position: relative;
         display: flex; 
@@ -59,18 +72,30 @@ body {
   padding: 10px;
   margin: 30px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+=======
+.card {
+  /* Add shadows to create the "card" effect */
+  padding: 105px;
+  margin: 45px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+>>>>>>> 8dc4b9c9efe30244d08e8973221f5c4de0641c8e
   transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+<<<<<<< HEAD
   border-radius: 5px; 
+=======
+  border-radius: 5px;
+  /* 5px rounded corners */
+>>>>>>> 8dc4b9c9efe30244d08e8973221f5c4de0641c8e
 }
 
 .cardContainer {
@@ -85,6 +110,7 @@ body {
   font-weight: lighter;
 }
 
+<<<<<<< HEAD
 /* .videoDescContent {
   position: fixed;
   bottom: 0;
@@ -164,3 +190,70 @@ footer.site-footer{
     justify-content:space-between;
     gap:12px;
   }
+=======
+/*Start Commentaire style pour ABOUT.HTML*/
+/* Team page styling */
+/* scrolling */
+html {
+  scroll-behavior: smooth;
+}
+/* Main section setup*/
+.section-team {
+  padding: 60px 20px 100px;
+  font-family: 'Poppins', sans-serif;
+}
+/* "MEET THE TEAM" tittre */
+.team-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-intro p {
+  font-size:12px ;
+  letter-spacing: 0.4em;
+  color: #777;
+  margin-bottom: 5px;
+}
+.team-intro h3 {
+  font-size: 28px;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+}
+/*Grid layout*/
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 30px; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/*Card design*/
+.team-card{
+  background:white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow:hidden;
+  text-align: center;
+  transition:transfomr 0.2s ease, box-shadow 0.2s ease;
+}
+.team-card:hover {
+  transform:translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+/*End Commentaire style pour ABOUT.HTML*/
+
+
+/*Start Commentaire style pour team*/
+
+
+/*End Commentaire style pour team*/
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Height of the footer */
+  background: rgb(3, 3, 3);
+  color: aliceblue;
+}
+>>>>>>> 8dc4b9c9efe30244d08e8973221f5c4de0641c8e
