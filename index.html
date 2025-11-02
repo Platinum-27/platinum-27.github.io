@@ -4,59 +4,107 @@
     <!-- <script src="https://kit.fontawesome.com/b172be2cd1.js" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="D:/Mes cours/Seg/project/styles.css">
+    <!-- <script src="navLoader.js"></script> -->
 </head>
 
 <body>
-
+    
     <div class="nav">
-
-        <a class="active" href="#home">
-            <i class="fa fa-home"></i>
-        </a>
-        <a href="product.html">Produit</a>
-        <a href="prix.html">Prix</a>
+        <a href="index.html">
+            <i class="fa fa-home">LOGO</i>
+        <a href="product.html">Product</a>
+        <a href="shop.html">Shop</a>
         <a href="about.html">Team</a>
-
-        <!-- Menu Nav Right -->
-        <div class="navRight">
-            <a href="#aPropos">About Us</a>
-
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <i class="fa fa-search"></i> 
-            </div>
-        </div>
-
-    </div>
-    <!-- Main Content -->
-    <div> 
-
-        <div style="display: flex;">
-
-            <div class="card">
-                <div class="container">
-                    
-                </div> 
-            </div>
-
-            <div class="card">
-                <div class="container">
-                    
-                </div> 
-            </div>
-
-        </div>
+        <a href="#aPropos">About Us</a>
         
     </div>
 
-    <!-- Footer -->
-     <div id="footer">
-        <!-- <p style="margin: 5px; padding: 10px;">Team 27</p> -->
-        <p style="margin: 5px; padding: 10px; text-align: end;">All rights reserved</p>
-     </div>
-    
-   </div>
-</body>
+    </div>
+    <!-- Main Content -->
+    <main> 
+        <!-- Video and text -->
+        <div>
 
+            <video autoplay muted loop id="myVideo">
+                <source src="videos/homePageVideo.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            
+            <div class="videoDescContent">
+                    <h1 id="textPresensation">
+                                Essayez le futur dès aujourd’hui avec le miroir d’essayage virtuel.
+                    </h1>
+
+                    <h2 id="textPresensation" >Miroir de mode du futur</h2>
+
+                    <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
+            </div>
+        </div>
+
+        <div style="display: flex;">
+
+            <!-- class="card" -->
+            <div style="padding: 20px; flex-grow: 7; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        margin: 20px;" >
+                <!--  class="cardContainer" -->
+                <div>
+                    <p>
+                        Le Miroir de Mode Virtuel, communément appelé cabine d’essayage virtuelle, propose une méthode révolutionnaire 
+                            pour évaluer la silhouette d’un individu et superposer des vêtements virtuels de manière fluide.
+
+                            Cette technologie de pointe permet des ajustements en temps réel des vêtements 3D,
+                            s’adaptant automatiquement à la taille du porteur. La cabine d’essayage virtuelle,
+                            également connue sous le nom de cabine d’essayage virtuelle, dépasse la simple fonctionnalité en
+                             intégrant des caractéristiques interactives
+                            qui améliorent l’engagement des clients.
+                    </p>
+                    <p>
+                        Avec la capacité de recueillir des retours précieux des clients, 
+                            le miroir de mode virtuel constitue un ajout divertissant et innovant à tout événement ou installation 
+                            permanente dans un magasin de détail,
+                            en particulier dans les cabines d’essayage. En intégrant cette technologie, 
+                            les clients peuvent profiter d’une expérience de shopping personnalisée et interactive,
+                            leur permettant d’essayer virtuellement différents vêtements et d’explorer divers styles,
+                            le tout avec la commodité d’un miroir.
+                    </p>
+
+                    <p>
+                        En adoptant le Miroir de Mode Virtuel, les détaillants peuvent révolutionner l’expérience de shopping traditionnelle, 
+                            en l’infusant d’excitation et d’interactivité. Cette technologie offre une manière unique d’engager les clients 
+                            et de fournir un parcours d’achat inoubliable.
+                    </p>
+                </div> 
+            </div>
+
+            <div style="flex-grow: 6;">
+                <div >
+                   <p>
+                        En adoptant le Miroir de Mode Virtuel, les détaillants peuvent révolutionner l’expérience de shopping traditionnelle, 
+                            en l’infusant d’excitation et d’interactivité. Cette technologie offre une manière unique d’engager les clients 
+                            et de fournir un parcours d’achat inoubliable.
+                    </p> 
+                </div> 
+            </div>
+            <!-- <div class="card">
+                <div class="cardContainer">
+                    
+                </div> 
+            </div> -->
+
+        </div>
+        
+    </main>
+
+     <footer class="site-footer" id="siteFooter" role="contentinfo" aria-hidden="false">
+        <div class="footer-inner">
+        <div class="meta">Miroir d'essayage virtuel — Démo</div>
+         <a class="cta" href="#" id="ctaBtn">Essayer maintenant</a>
+        </div>
+    </footer>
+
+    <script src="navLoader.js"></script>
+
+    </body>
 </html>
