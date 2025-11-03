@@ -85,7 +85,6 @@ body {
   font-weight: lighter;
 }
 
-<<<<<<< HEAD
 /*Start Commentaire style pour ABOUT.HTML*/
 /* Team page styling */
 /* scrolling */
@@ -158,9 +157,6 @@ html {
 /*End Commentaire style pour team*/
 
 #footer {
-=======
-/* .videoDescContent {
->>>>>>> 0c2cd56edb5a6a2d140428f2a24cd94844a7d737
   position: fixed;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -274,12 +270,14 @@ footer.site-footer{
   background-color: white;
   border-radius: 10px;
   margin: 30px 15px;
-  box-shadow: 10px 10px 10px -1px #635516,
+  box-shadow: 5px 5px 5px -1px #7a7a7a,
               -10px -10px 10px -1px #cccccc;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .price-box:hover{
+  background-color: #ffffff;
   color:#280462;
   box-shadow: 10px 10px 20px -1px #280462,
               -10px -10px 20px -1px #cccccc;
@@ -301,7 +299,6 @@ footer.site-footer{
 .price-box p{
   margin: 30px 0px;
   color: #0f0f0f;
-
 
 }
 
