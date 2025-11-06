@@ -4,19 +4,21 @@ body {
 }
 
 .nav {
-  position: fixed;
+  display: flex;
+  background-color: blur(170px);
+  text-align: center;
   width: 100%;
   z-index: 1000;
+  justify-content: space-around;
   top: 0;
   overflow: hidden;
-  background-color: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.96));
   /* border-top:10px solid rgba(255,255,255,0.03); */
   backdrop-filter: blur(170px);
 }
 
 .nav a {
   float: left;
-  color: #000;
+  color: #ffffff;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
@@ -24,7 +26,8 @@ body {
 }
 
 .nav a:hover {
-  background-color: #280462;
+  text-size-adjust: 100%;
+  background-color: #a3a3a3;
   color: rgb(249, 245, 245);
 }
 
@@ -98,7 +101,6 @@ html {
 
 /* Main section setup*/
 .section-team {
-  background-color: #f8f9fb;
   padding: 60px 20px 100px;
   font-family: 'Poppins', sans-serif;
 }
@@ -133,7 +135,7 @@ html {
 
 /*Card design*/
 .team-card {
-  background: white;
+  background: #280462;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
