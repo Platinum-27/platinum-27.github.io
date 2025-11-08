@@ -9,7 +9,7 @@ body {
   z-index: 1000;
   top: 0;
   overflow: hidden;
-  background-color: linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.96));
+  background-color: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.96));
   /* border-top:10px solid rgba(255,255,255,0.03); */
   backdrop-filter: blur(170px);
 }
@@ -34,53 +34,57 @@ body {
 }
 
 .navRight {
-    float: right;
+  float: right;
 }
 
 .search-container {
-        position: relative;
-        display: flex; 
-        align-items: center;
-      
-    }
-    .search-container input {
-        
-        padding: 20px 20px;
-        /* padding: 10px;  */
-    }
-    .search-container i {
-        position: absolute;
-        right: 10px; 
-    }
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-container input {
+
+  padding: 20px 20px;
+  /* padding: 10px;  */
+}
+
+.search-container i {
+  position: absolute;
+  right: 10px;
+}
 
 /* Card View CSS */
 .card {
   /* Add shadows to create the "card" effect */
   padding: 10px;
   margin: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .cardContainer {
   padding: 0px 0px;
 }
+
 /* End card View s */
 
 /* Start Home page css  */
-#textPresensation{
-  font-size: 50px; text-align: center;
+#textPresensation {
+  font-size: 50px;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
 }
@@ -146,7 +150,7 @@ html {
 
 
 /*Start Commentaire style pour team*/
-.meet-the-team  {
+.meet-the-team {
   background-color: #ffffff;
   line-height: 1.6;
   min-height: 100vh;
@@ -164,9 +168,9 @@ html {
   width: 100%;
   padding: 20px;
   margin-top: 20px;
-} 
+}
 
-#myVideo { 
+#myVideo {
   bottom: 200;
   max-width: 100%;
   /* min-width: 100%; 
@@ -191,56 +195,68 @@ html {
 /* End Home Page Css */
 
 /* Footer Translation */
-main{padding-bottom: calc(var(--footer-h) + 24px);}
-  @media (max-width:520px){
-    .footer-inner{flex-direction:column;align-items:center;gap:8px;}
-    .cta{width:100%;text-align:center;}
+main {
+  padding-bottom: calc(var(--footer-h) + 24px);
+}
+
+@media (max-width:520px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Sticky footer */
-footer.site-footer{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    height:var(--footer-h);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0 0px;
-    background:linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.96));
-    border-top:1px solid rgba(255,255,255,0.03);
-    backdrop-filter: blur(6px);
-    z-index:1000;
-    height:80px;
+footer.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0px;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.96));
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  height: 80px;
 
-    /* Visible by default (translateY(0)) */
-    transform: translateY(0);
-    transition: transform 300ms cubic-bezier(.2,.9,.3,1), opacity 220ms ease;
-    opacity:1;
-  }
+  /* Visible by default (translateY(0)) */
+  transform: translateY(0);
+  transition: transform 300ms cubic-bezier(.2, .9, .3, 1), opacity 220ms ease;
+  opacity: 1;
+}
 
-  /* Hidden state: slide down and hide */
-  footer.site-footer.hidden{
-    transform: translateY(110%);
-    opacity:0;
-    pointer-events:none;
-  }
+/* Hidden state: slide down and hide */
+footer.site-footer.hidden {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
 
-  /* Footer content */
-  .footer-inner{
-    max-width:1100px;
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-  }
+/* Footer content */
+.footer-inner {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
-  
-  
-  
+
+
+
 /* -----Price page styles----- */
-.price-body{
+.price-body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -251,68 +267,70 @@ footer.site-footer{
   min-height: 100vh;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #5e5e5e;
 }
 
-.wrapper :hover{
-  color:#280462;
+.wrapper :hover {
+  color: #280462;
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
-.price-box{
+.price-box {
   max-width: 300px;
   padding: 40px;
   background-color: white;
   border-radius: 10px;
   margin: 30px 15px;
   box-shadow: 5px 5px 5px -1px #7a7a7a,
-              -10px -10px 10px -1px #cccccc;
+    -10px -10px 10px -1px #cccccc;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
-.price-box:hover{
+.price-box:hover {
   background-color: #ffffff;
-  color:#280462;
+  color: #280462;
   box-shadow: 10px 10px 20px -1px #280462,
-              -10px -10px 20px -1px #cccccc;
+    -10px -10px 20px -1px #cccccc;
 }
-.price-box h3{
+
+.price-box h3 {
   margin-bottom: 15px;
 }
 
-.price-box h1{
+.price-box h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color:#000000;
+  color: #000000;
 }
-.price-box h1 span{
+
+.price-box h1 span {
   font-size: 0.4em;
   color: #0f0f0f;
 }
 
-.price-box p{
+.price-box p {
   margin: 30px 0px;
   color: #0f0f0f;
 
 }
 
-.price-box ul{
+.price-box ul {
   list-style: none;
   padding: 0;
 }
 
-.price-box ul li{
+.price-box ul li {
   line-height: 3;
-  color:#0f0f0f;
+  color: #0f0f0f;
 }
 
-.price-box a{
+.price-box a {
   margin: 20px 0px;
   text-align: center;
   display: block;
@@ -325,7 +343,7 @@ footer.site-footer{
   border-radius: 5px;
 }
 
-.price-box a:hover{
+.price-box a:hover {
   background-color: #280462;
   color: white;
 }
