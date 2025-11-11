@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum-27 | Reflecta</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Platinum-27" class="logo">
+            <div class="other-products">
+
+                <a href="#" onclick="loadProduct('classic')">CLASSIQUE</a>
+                <a href="#" onclick="loadProduct('renaissance')">RENAISSANCE</a>
+                <a href="#" onclick="loadProduct('pro')">PRO</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- PAGE DÉTAIL PRODUIT -->
+        <div class="product-grid">
+            <div class="image-section">
+                <!-- REMPLACE "mirror_classic.png" AVEC TES IMAGES -->
+                <img id="productImage" class="main-image" src="mirror_classic.png" alt="Reflecta">
+            </div>
+
+            <div class="product-info">
+                <h1 id="productTitle" class="titre-produit">REFLECTA CLASSIQUE</h1>
+                <div id="productPrice" class="prix">499,99 €</div>
+
+                <div class="description" id="productDescription">
+                    Miroir intelligent au design moderne et épuré, parfait pour les intérieurs contemporains.
+                </div>
+
+                <div class="variants">
+                    <div class="variant-options">
+                        <div class="variant-option active" onclick="selectVariant('classic')">Classique</div>
+                        <div class="variant-option" onclick="selectVariant('renaissance')">Renaissance</div>
+                    </div>
+
+                    <div class="color-options">
+                        <div class="color-option color-gold active" onclick="selectColor('gold')"></div>
+                        <div class="color-option color-silver" onclick="selectColor('silver')"></div>
+                        <div class="color-option color-black" onclick="selectColor('black')"></div>
+                    </div>
+                </div>
+
+                <div class="section-details">
+                    <h3>SPÉCIFICATIONS</h3>
+                    <ul id="productSpecs">
+                        <li>Hauteur: 1,55 mètres</li>
+                        <li>Poids: 18 kg</li>
+                        <li>Cadre aluminium brossé</li>
+                        <li>LED RGB personnalisable</li>
+                        <li>Connectivité Wi-Fi/Bluetooth</li>
+                    </ul>
+                </div>
+
+                <button class="acheter" onclick="addToCart()">AJOUTER AU PANIER</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 PLATINUM-27
+        </div>
+    </footer>
+
+    <script>
+        const products = {
+            classic: {
+                title: "REFLECTA CLASSIQUE",
+                price: "499,99 €",
+                image: "mirror_classic.png",
+                description: "Miroir intelligent au design moderne et épuré, parfait pour les intérieurs contemporains.",
+                specs: [
+                    "Hauteur: 1,55 mètres",
+                    "Poids: 18 kg",
+                    "Cadre aluminium brossé",
+                    "LED RGB personnalisable",
+                    "Connectivité Wi-Fi/Bluetooth"
+                ]
+            },
+            renaissance: {
+                title: "REFLECTA RENAISSANCE",
+                price: "599,99 €",
+                image: "mirror_renaissance.png",
+                description: "Miroir intelligent au cadre orné style renaissance, pour un intérieur raffiné.",
+                specs: [
+                    "Hauteur: 1,55 mètres",
+                    "Poids: 20 kg",
+                    "Cadre doré ouvragé",
+                    "LED ambiante chaude",
+                    "Reconnaissance vocale intégrée"
+                ]
+            },
+            pro: {
+                title: "REFLECTA PRO",
+                price: "799,99 €",
+                image: "mirror_pro.png",
+                description: "Version professionnelle avec fonctionnalités avancées pour les passionnés de mode.",
+                specs: [
+                    "Hauteur: 1,60 mètres",
+                    "Poids: 22 kg",
+                    "Cadre titane mat",
+                    "Éclairage studio professionnel",
+                    "IA de tendances en temps réel"
+                ]
+            }
+        };
+
+        function loadProduct(productId) {
+            const product = products[productId];
+
+            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productDescription').textContent = product.description;
+
+            const specsList = document.getElementById('productSpecs');
+            specsList.innerHTML = '';
+            product.specs.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                specsList.appendChild(li);
+            });
+        }
+
+        function selectVariant(variant) {
+            document.querySelectorAll('.variant-option').forEach(opt => opt.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function selectColor(color) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function addToCart() {
+            alert('Produit ajouté au panier !');
+        }
+
+        // Charger le produit classique par défaut
+        window.addEventListener('DOMContentLoaded', function () {
+            loadProduct('classic');
+        });
+    </script>
+</body>
+
+</html>
