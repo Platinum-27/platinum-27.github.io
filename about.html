@@ -11,12 +11,12 @@
 
 <body>
   <nav id="navbar-frame" class="nav">
-        <a href="index.html" class="brand">
-            <i class="fa fa-home">LOGO</i>
-        </a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">Team</a>
-    </nav>
+    <a href="index.html" class="brand">
+      <i class="fa fa-home">LOGO</i>
+    </a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">Team</a>
+  </nav>
 
 
   <section id="team" class="section-team">
@@ -30,50 +30,50 @@
       <!--first card-->
       <article class="team-card">
         <div class="card-photo">
-          <img src="" alt="Nour Haddad">
+          <img src="images/Nour.png" alt="Nour Haddad">
         </div>
         <div class="card-info">
-          <h4 class="name">NAME</h4>
+          <h4 class="name">Nour Haddad</h4>
           <p class="role">Co-Founder</p>
         </div>
       </article>
       <!--second card-->
       <article class="team-card">
         <div class="card-photo">
-          <img src="" alt="Ilyas Bennouri">
+          <img src="images/Ilyas.png" alt="Ilyas Bennouri">
         </div>
         <div class="card-info">
-          <h4 class="name">NAME</h4>
+          <h4 class="name">Ilyas Bennouri</h4>
           <p class="role">Co-Founder</p>
         </div>
       </article>
       <!--third card-->
       <article class="team-card">
         <div class="card-photo">
-          <img src="" alt="Mamadou Bobo Diallo">
+          <img src="images/Mamadou.png" alt="Mamadou Bobo Diallo">
         </div>
         <div class="card-info">
-          <h4 class="name">NAME</h4>
+          <h4 class="name">Mamadou Bobo Diallo</h4>
           <p class="role">Co-Founder</p>
         </div>
       </article>
       <!--fourth card-->
       <article class="team-card">
         <div class="card-photo">
-          <img src="" alt="Hawa Thiam">
+          <img src="images/Hawa.png" alt="Hawa Thiam">
         </div>
         <div class="card-info">
-          <h4 class="name">NAME</h4>
+          <h4 class="name">Hawa Thiam</h4>
           <p class="role">Co-Founder</p>
         </div>
       </article>
       <!--fifth card-->
       <article class="team-card">
         <div class="card-photo">
-          <img src="" alt="Myra Wequaisse">
+          <img src="images/Myra.png" alt="Myra Wequaisse">
         </div>
         <div class="card-info">
-          <h4 class="name">NAME</h4>
+          <h4 class="name">Myra Wequaisse</h4>
           <p class="role">Co-Founder</p>
         </div>
       </article>
@@ -85,6 +85,16 @@
   </div>
 
   </div>
+  <script>
+    const card = document.querySelectorAll('.team-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+
+      });
+    }, { threshold: 0.2 });
+    card.forEach(card => observer, obsere(card));
+  </script>
 </body>
 
 </html>
