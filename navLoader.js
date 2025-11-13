@@ -1,117 +1,38 @@
-// $(document).ready(function(){
-//     $("#navbar-frame").load("navbar.html");
-// });
+let sections = document.querySelectorAll('section')
+let Nlinks = document.querySelectorAll('nav a')
 
-// $(function(){
-//   $("#navbar-frame").load("navbar.html");
-// });
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
 
-//Video Home page Js
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
+    if(top >= offset && top < offset + height) {
+      Nlinks.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector('nav a [href*=' + id + ']').classList.add('active');
+      });
+    };
+  });
+};
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
+/*----Hamburger Menu----*/
+
+let navLinks = document.getElementById("navLinks");
+
+function showMenu(){
+    navLinks.style.right = "0";
 }
-// End Video Home page CSS
 
-    (function(){
-    const footer = document.getElementById('siteFooter');
-    let lastScroll = window.scrollY || 0;
-    let ticking = false;
-    const THROTTLE_MS = 100; // intervalle entre traitements (ajustable)
-    const SHOW_THRESHOLD = 10; // petit déplacement minimal pour éviter jitter
+function hideMenu(){
+    navLinks.style.right = "-200px";
+}
 
-    
-    function isNearBottom(px = 120){
-        return (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - px);
-    }
+/*----Sticky Nav Bar----*/
 
-    function onScroll(){
-        if(!ticking){
-        ticking = true;
-        setTimeout(() => {
-            const current = window.scrollY || 0;
-            const delta = current - lastScroll;
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("nav");
+  header.classList.toggle("sticky", window.scrollY > 0);
+})
 
-            if(Math.abs(delta) < SHOW_THRESHOLD){
-            // petit mouvement — ne rien faire
-            } else if(delta > 0){
-            // scrolldown -> hide footer
-            footer.classList.add('hidden');
-            footer.setAttribute('aria-hidden','true');
-            } else {
-            // scrollup -> show footer
-            footer.classList.remove('hidden');
-            footer.setAttribute('aria-hidden','false');
-            }
-
-            if(isNearBottom(80)){
-            footer.classList.remove('hidden');
-            footer.setAttribute('aria-hidden','false');
-            }
-
-            lastScroll = current <= 0 ? 0 : current;
-            ticking = false;
-
-            // Video Pause
-            if (video.paused) {
-              video.play();
-              //btn.innerHTML = "Pause";
-            } 
-            else {
-              video.pause();
-              //btn.innerHTML = "Play";
-            }
-
-        }, THROTTLE_MS);
-        }
-    }
-
-    //show footer when user stops scrolling
-    let scrollTimeout = null;
-    window.addEventListener('scroll', function(){
-        onScroll();
-
-        if(scrollTimeout !== null) clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-        footer.classList.remove('hidden');
-        footer.setAttribute('aria-hidden','false');
-        }, 1200);
-    }, { passive: true });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        if(isNearBottom(80)) {
-        footer.classList.remove('hidden');
-        footer.setAttribute('aria-hidden','false');
-        }
-    });
-
-    document.getElementById('ctaBtn').addEventListener('click', (e)=>{
-        e.preventDefault();
-        alert("Action: Essayer la cabine d'essayage virtuelle (demo)");
-    });
-    })();
-
-
-// fetch('D:/Mes cours/Seg/project/navbar.html', {
-//   mode: 'no-cors',
-//   headers: {
-//     'Access-Control-Allow-Origin':'*'
-//   }
-// })
-//             .then(response => {
-//                 if (!response.ok) {
-//                 throw new Error('Network response was not ok');
-//             }
-//             return response.text(); // Get the response as plain text
-//         })
-//             .then(htmlContent  => {
-//                 document.getElementById('navbar-frame').innerHTML = htmlContent;
-//             });

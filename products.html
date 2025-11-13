@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platinum-27 | Reflecta</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="./product-style.css"> <!-- Link to external CSS file -->
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <img src="logo.png" alt="Platinum-27" class="logo">
+            <img src="./images/logo.png" alt="Platinum-27" class="logo">
             <div class="other-products">
 
                 <a href="#" onclick="loadProduct('classic')">CLASSIQUE</a>
@@ -26,7 +26,7 @@
         <div class="product-grid">
             <div class="image-section">
                 <!-- REMPLACE "mirror_classic.png" AVEC TES IMAGES -->
-                <img id="productImage" class="main-image" src="mirror_classic.png" alt="Reflecta">
+                <img id="productImage" class="main-image" src="./images/classic.png" alt="Reflecta">
             </div>
 
             <div class="product-info">
@@ -41,6 +41,7 @@
                     <div class="variant-options">
                         <div class="variant-option active" onclick="selectVariant('classic')">Classique</div>
                         <div class="variant-option" onclick="selectVariant('renaissance')">Renaissance</div>
+                        <div class="variant-option" onclick="selectVariant('pro')">Pro</div>
                     </div>
 
                     <div class="color-options">
