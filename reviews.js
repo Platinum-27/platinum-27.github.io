@@ -64,6 +64,8 @@ function initReviews() {
                 <div class"review-author">
                     <div class="author-avatar">${review.author.charAt(0)}</div>
                         <div class="author-info">
+                            <h4>"${review.author}"</h4>
+                        </div>
                     </div>
                 <p class="review-text">"${review.text}"</p>
                 </div>
@@ -100,17 +102,19 @@ function prevReview() {
 }
 
 // Mettre à jour l'affichage
+// Mettre à jour l'affichage
 function updateReviews() {
     // Mettre à jour la position
-    reviewsTrack.style.transform = `translateX(-${currentIndex * reviewsTrack.offsetWidth}px)`;
+    const reviewWidth = reviewsTrack.children[0].offsetWidth;
+    reviewsTrack.style.transform = `translateX(-${currentIndex * reviewWidth}px)`;
             
     // Mettre à jour les indicateurs
-        document.querySelectorAll('.indicator').forEach((indicator, index) => {
+    document.querySelectorAll('.indicator').forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
     });
             
-// Redémarrer le défilement automatique
-resetAutoPlay();
+    // Redémarrer le défilement automatique
+    resetAutoPlay();
 }
 
 // Démarrer le défilement automatique
