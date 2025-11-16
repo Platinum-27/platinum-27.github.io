@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <script src="https://kit.fontawesome.com/b172be2cd1.js" crossorigin="anonymous"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Reflecta</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c92939b4e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+            <a href="index.html" class="logo"><img src="./images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()" aria-label="Close menu"></i>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#price">Price</a></li>                       
+                    <li><a href="about.html">About Us</a></li>                                
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()" aria-label="Open menu" aria-expanded="false"></i>
+        </nav>
+        
+    <!------Hero / Title page------>
+    <section class="header imageReveal" id="header" >
+    
+        <div class="textbox">
+            <h1>Reflecta</h1>
+            <p>Experience the future of virtual try-ons with Reflecta's cutting-edge AR technology. Seamlessly blend reality and<br> 
+                imagination as you explore a world of fashion at your fingertips. Try it now!</p>
+            <a href="#info" class="hero-btn">Get Started</a>
+        </div>    
+    </section>
+    
+
+    <!-----INFO PAGE----->
+    <section class="info imageReveal" id="info">
+        <h1>Why Choose Reflecta?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eaque quibusdam, facere, nesciunt eos officiis et necessitatibus<br>
+            cum incidunt dolor nisi dicta voluptatibus repudiandae sequi aut nemo corporis natus provident!</p>
+
+        <div class="row">
+            <div class="info-col">
+                <h3>Virtual Try-On</h3>
+                <p>Experience the future of shopping with our cutting-edge virtual try-on technology. See how clothes fit and look on you without leaving your home!</p>
+            </div>
+            <div class="info-col">
+                <h3>Augmented Reality</h3>
+                <p>Immerse yourself in a world where digital meets reality. Our augmented reality features bring products to life, allowing you to visualize them in your own space.</p>
+            </div>
+            <div class="info-col">
+                <h3>Ease of Use</h3>
+                <p>Our user-friendly interface ensures a seamless experience. Navigate through our platform effortlessly and enjoy a hassle-free shopping journey.</p>
+            </div>
+    </section>
+
+    <!-----PRICING PAGE------>    
+    <section class="price imageReveal" id="price">
+        <h1>Pricing Plans</h1>
+        <p>Choose the plan that suits you best and start your journey with Reflecta today!</p>
+
+        <div class="toggle">
+            <label></label>
+        </div>
+
+        <div class="price-container">
+            <div class="price-grid">
+                <div class="price-card">
+                    <h2 class="price-card-title">CLASSIQUE</h2>
+                    <p class="price-amount">$499,99</p>
+                    <hr class="price-hr">
+                    <ul class="price-features">
+                        <li>Hauteur: 1,55 mètres</li>
+                        <li>Poids: 18 kg</li>
+                        <li>Cadre en aluminium brossé</li>
+                        <li>LED RGB personnalisable</li>
+                        <li>Connectivité Wi-Fi/Bluetooth</li>
+                        
+                    </ul>
+                    <a href="products.html" class="price-card-btn">Buy Now</a>
+                </div>
+                <div class="price-card">
+                    <h2 class="price-card-title">RENAISSANCE</h2>
+                    <p class="price-amount">$599,99</p>
+                    <hr class="price-hr">
+                    <ul class="price-features">
+                        <li>Hauteur: 1,55 mètres</li>
+                        <li>Poids: 20 kg</li>
+                        <li>Cadre doré ouvragé</li>
+                        <li>LED ambiante chaude</li>
+                        <li>Reconnaissance vocale intégrée</li>
+                    </ul>
+                    <a href="products.html" class="price-card-btn">Buy Now</a>
+                </div>
+                <div class="price-card">
+                    <h2 class="price-card-title">PRO</h2>
+                    <p class="price-amount">$799,99</p>
+                    <hr class="price-hr">
+                    <ul class="price-features">
+                        <li>Hauteur: 1,60 mètres</li>
+                        <li>Poids: 22 kg</li>
+                        <li>Cadre titane mat</li>
+                        <li>Éclairage studio professionnel</li>
+                        <li>IA de tendances en temps réel</li>
+                    </ul>
+                    <a href="products.html" class="price-card-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+    <script src="navLoader.js"></script>
+    
+    <footer class="site-footer imageReveal" id="siteFooter" role="contentinfo" aria-hidden="false">
+        <div class="footer-inner">
+        <div class="meta">Miroir d'essayage virtuel — Démo</div>
+         <a class="cta" href="#" id="ctaBtn">Essayer maintenant</a>
+        </div>
+    </footer>
+
+    <script src="navLoader.js"></script>
+
+    </body>
+</html>

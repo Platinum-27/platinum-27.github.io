@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-- <script src="https://kit.fontawesome.com/b172be2cd1.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./styles.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+  <nav id="nav">
+            <a href="index.html" class="logo"><img src="./images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#price">Price</a></li>                       
+                    <li><a href="about.html">About Us</a></li>                                
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+  <section id="team" class="section-team">
+
+    <div class="team-intro">
+      <p>MEET THE</p>
+      <h3>TEAM</h3>
+    </div>
+
+    <div class="team-grid">
+      <!--first card NOUR-->
+      <article class="team-card">
+        <div class="card-photo">
+          <img src="images/face/Nour.jpg" alt="Nour Haddad">
+        </div>
+        <div class="card-info">
+          <h4 class="name">Nour Haddad</h4>
+          <p class="role">Co-Founder</p>
+        </div>
+      </article>
+      <!--second card ILYAS-->
+      <article class="team-card">
+        <div class="card-photo">
+          <img src="images/face/Ilyas.jpg" alt="Ilyas Bennouri">
+        </div>
+        <div class="card-info">
+          <h4 class="name">Ilyas Bennouri</h4>
+          <p class="role">Co-Founder</p>
+        </div>
+      </article>
+      <!--third card MAMADOU-->
+      <article class="team-card">
+        <div class="card-photo">
+          <img src="images/face/Mamadou.jpg" alt="Mamadou Bobo Diallo">
+        </div>
+        <div class="card-info">
+          <h4 class="name">Mamadou Bobo Diallo</h4>
+          <p class="role">Co-Founder</p>
+        </div>
+      </article>
+      <!--fourth card HAWA-->
+      <article class="team-card">
+        <div class="card-photo">
+          <img src="images/face/Hawa.jpg" alt="Hawa Thiam">
+        </div>
+        <div class="card-info">
+          <h4 class="name">Hawa Thiam</h4>
+          <p class="role">Co-Founder</p>
+        </div>
+      </article>
+      <!--fifth card MYRA-->
+      <article class="team-card">
+        <div class="card-photo">
+          <img src="images/face/Myra.jpg" alt="Myra Wequaisse">
+        </div>
+        <div class="card-info">
+          <h4 class="name">Myra Wequaisse</h4>
+          <p class="role">Co-Founder</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Footer -->
+  <div id="footer">
+    <p style="margin: 5px; padding: 10px; text-align: end;">All rights reserved</p>
+  </div>
+
+  </div>
+  <script>
+    const card = document.querySelectorAll('.team-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+
+      });
+    }, { threshold: 0.2 });
+    card.forEach(card => observer, observe(card));
+  </script>
+</body>
+
+</html>
