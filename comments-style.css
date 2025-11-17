@@ -379,7 +379,7 @@ gap: 12px;
 
 .btn {
 padding: 10px 20px;
-background: var(--dark-color);
+background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
 color: white;
 border: none;
 border-radius: 25px;
@@ -410,13 +410,13 @@ gap: 8px;
 width: 10px;
 height: 10px;
 border-radius: 50%;
-background-color: #ddd;
+background-color:#f0ddff;
 cursor: pointer;
 transition: background-color 0.3s ease;
 }
 
 .indicator.active {
-background: var(--secondary-color);
+background: var(--violet-clair);
 }
 
 .auto-play-toggle {
@@ -424,7 +424,7 @@ background: var(--secondary-color);
 align-items: center;
 justify-content: center;
 margin-top: 15px;
-color: #666;
+color:#f3b5df;
 font-size: 0.85rem;
 }
 
@@ -449,7 +449,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: #ccc;
+background-color:#ffd6a5;
 transition: .4s;
 border-radius: 22px;
 }
@@ -461,13 +461,13 @@ height: 16px;
 width: 16px;
 left: 3px;
 bottom: 3px;
-background-color: white;
+background-color:#ffffff;
 transition: .4s;
 border-radius: 50%;
 }
 
 input:checked + .slider {
-background: var(--secondary-color);
+background: var(--violet-clair);
 }
 
 input:checked + .slider:before {
