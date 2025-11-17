@@ -158,3 +158,4 @@ reviewsTrack.addEventListener('mouseleave', function() {
 
 // Initialiser au chargement
 document.addEventListener('DOMContentLoaded', initReviews);
+
