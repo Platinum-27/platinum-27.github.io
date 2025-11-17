@@ -533,10 +533,12 @@ html {
 /*Grid layout*/
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1500px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 
@@ -544,21 +546,27 @@ html {
 .team-card {
   background: #342656;
   border-radius: 14px;
-  width: 220px;
-  height: 320px;
+  width: 100%;
+  max-width: 260px;
+  min-height: 340px;
+  height: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   text-align: center;
-  transition: transfomr 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
 }
 
 .team-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(128, 0, 255, 0.6);
+  position: relative;
+  z-index: 10;
 }
 
 /*Images*/
@@ -580,11 +588,11 @@ html {
   transition: transform 0.3s ease;
 }
 
-.card-info {
+.team-card:hover .card-photo img {
   transform: scale(1.1);
 }
 
-   .card-info {
+.card-info {
   flex-grow: 1;
   padding: 12px 8px 0;
   color: white;
@@ -603,11 +611,19 @@ html {
   color: #d4caff;
 }
 
+.card-info .more{
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color:#bcbcbc
+
+}
+
 /*Animation*/
 .team-card {
   opacity: 1;
   transform: translateY(20px);
   min-height: 340px;
+  height: auto; 
 }
 
 .team-card.show {
@@ -615,7 +631,22 @@ html {
   transform: translateY(0);
   transition: all 0.6s ease;
 }
-
+@media(max-width: 1200px){
+  .team-grid{
+    grid-template-columns: repeat(auto-fill,260px);
+  }
+}
+@media(max-width: 900px){
+  .team-grid {
+    grid-template-columns: repeat(auto-fill,260px);
+    gap:30px
+  }
+}
+@media(max-width:600px){
+  .team-grid{
+    grid-template-columns: 260px;
+  }
+}
 /*End Commentaire style pour ABOUT.HTML*/
 
 /*---Animation Scroll---*/
