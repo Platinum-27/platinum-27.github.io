@@ -249,7 +249,7 @@ nav .fa-xmark {
   padding-block: 1rem;
   display: flex;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 10rem;
   width: max-content;
   align-items: center;
   will-change: transform;    /* smoother anim, no layout impact */
