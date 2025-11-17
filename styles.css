@@ -14,10 +14,18 @@
   --rose-clair: #f0ddff;
   --dark-color: #0c004d;
   --violet-pale-2: #231b35;
-  --blanc-gris: #d9d4ea;         /* body text */
-  --violet-blanc: #a855f7;            /* secondary text */
-  --magenta: #b79cff;             /* focus ring */
+  --blanc-gris: #d9d4ea;         
+  --violet-blanc: #a855f7;            
+  --magenta: #b79cff;
   --title: 65px;
+}
+
+html, body{
+  max-width: 100vw;
+  overflow-x: clip;          /* hide any stray overflow */
+}
+@supports not (overflow: clip){
+  html, body{ overflow-x: hidden; }
 }
 
 body {
@@ -25,6 +33,7 @@ body {
   background: var(--noir);
   color: var(--blanc);
   background-image: linear-gradient(50deg, var(--violet-pale-2), var(--noir));
+  justify-content: center;
 }
 
 /* ---NAV BAR--- */
@@ -162,13 +171,14 @@ nav .fa-xmark {
 
 /* ---HERO PAGE--- */
 .header {
-  min-height: 80vh;
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* centre verticalement tout le stack */
+  align-items: center;         /* centre horizontalement */
+  gap: clamp(16px, 4vh, 32px); /* espace entre texte et scroller */
+  padding-block: clamp(32px, 8vh, 72px);
   position: relative;
-  overflow: hidden;
 }
 
 .textbox {
@@ -182,7 +192,18 @@ nav .fa-xmark {
 }
 
 .textbox h1 {
-  font-size: 62px;
+  color: var(--blanc);
+  font-size: 55px;
+}
+
+.textbox h1 span{
+  font-size: 80px;
+  background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+  display: inline-block;
 }
 
 .textbox p {
@@ -194,6 +215,7 @@ nav .fa-xmark {
 .hero-btn {
   display: inline-block;
   text-decoration: none;
+  border-radius: 100px;
   color: var(--blanc);
   border: 2px solid var(--rose-clair);
   padding: 10px 30px;
@@ -204,8 +226,81 @@ nav .fa-xmark {
 
 .hero-btn:hover {
   border: 2px solid var(--blanc);
-  background: var(--rose-clair);
+  background: var(--violet-fonce);
+  transform: scale(120%);
   transition: 0.5s;
+}
+
+/*----INFINITE SCOLL BAR----*/
+.scroller {
+  margin-top: 350px;
+  inline-size: 100vw;       /* same as width: 100vw; but logical */
+  max-inline-size: 100vw;
+  margin-inline: auto;
+  overflow: clip;
+  opacity: 50%;
+}
+
+@supports not (overflow: clip){
+  .scroller{ overflow: hidden; }  /* fallback */
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: max-content;
+  align-items: center;
+  will-change: transform;    /* smoother anim, no layout impact */
+}
+
+.scroller__inner img {
+  filter: invert(1);
+  height: 100px;
+  display: block;
+  width: auto;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 /* ---INFOS--- */
