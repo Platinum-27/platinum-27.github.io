@@ -10,8 +10,8 @@
   --blanc: #ffffff;
   --violet-fonce: #14003d;
   --violet-clair: #b79cff;
-  --violet-pale: ;
-  --rose-clair: #f0ddff;
+  --violet-pale: #362953;
+  --rose-clair: #e2bbff;
   --dark-color: #0c004d;
   --violet-pale-2: #231b35;
   --blanc-gris: #d9d4ea;         
@@ -311,7 +311,7 @@ nav .fa-xmark {
   padding-top: 100px;
 }
 
-h1 {
+.info h1 {
   color: var(--rose-clair);
   font-size: 40px;
   font-weight: 800;
@@ -353,7 +353,7 @@ p {
   transition-delay: 600ms;
 }
 
-h3 {
+.info h3 {
   text-align: center;
   font-weight: 600;
   margin: 10px 0;
@@ -371,6 +371,70 @@ h3 {
 }
 
 /*-----PRICE------*/
+/*---Price button---*/
+.billing_options {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billing_options input {
+  display: none;
+}
+
+.billing_options .label {
+  height: 50px;
+  width: 300px;
+  border: solid 2px var(--rose-clair);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+#year {
+  color: var(--dark-color);
+}
+
+.label.selected #year {
+  color: var(--rose-clair);
+}
+
+.label.selected #month {
+  color: var(--dark-color);
+}
+
+.label.selected .active {
+  left: 160px;
+}
+
+.label small {
+  color: var(--rose-clair);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label .active {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  background-color: var(--rose-clair);
+  height: 90%;
+  width: 45%;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.price .show_price {
+  display: none;
+}
 
 .price {
   width: 80%;
@@ -408,6 +472,23 @@ h3 {
   border-radius: 25px;
 }
 
+.price-card:nth-child(2) {
+  background: var(--noir);
+  border: 3px solid var(--rose-clair);
+  transform: scale(110%);
+}
+
+.price-card:nth-child(2) h2{
+  color: var(--blanc);
+  font-size: 30px;
+  justify-content: center;
+}
+
+.price-card:nth-child(2) .price-amount {
+  font-weight: 750px;
+  font-size: 50px;
+}
+
 .price-card-title {
   font-weight: 600;
   font-size: 30px;
@@ -415,8 +496,14 @@ h3 {
 }
 
 .price-amount {
+  background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+  display: inline-block;
   font-size: 45px;
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -546,17 +633,14 @@ html {
 .team-card {
   background: #342656;
   border-radius: 14px;
-<<<<<<< HEAD
   width: 100%;
   max-width: 260px;
   min-height: 340px;
   height: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-=======
   width: 220px;
   height: 320px;
   box-shadow: 0 8px 16px rgba(106, 59, 59, 0.3);
->>>>>>> b55569178c50f536f86d0f3d083f23ab6b82817a
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
