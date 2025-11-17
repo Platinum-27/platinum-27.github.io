@@ -15,10 +15,10 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#info">Info</a></li>
-                    <li><a href="#price">Price</a></li>                       
-                    <li><a href="about.html">About Us</a></li>                                
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#info">Info</a></li>
+                    <li><a href="index.html#price">Price</a></li>                       
+                    <li><a href="about.html" class="active">About Us</a></li>                                
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
@@ -99,7 +99,7 @@
 
       });
     }, { threshold: 0.2 });
-    card.forEach(card => observer, observe(card));
+    card.forEach(card => observer.observe(card));
   </script>
 </body>
 
