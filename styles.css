@@ -400,6 +400,10 @@ p {
   color: var(--dark-color);
 }
 
+#month {
+  color: var(--rose-clair);
+}
+
 .label.selected #year {
   color: var(--rose-clair);
 }
@@ -434,6 +438,51 @@ p {
 
 .price .show_price {
   display: none;
+}
+
+/* monthly prices start hidden via your .show_price rule */
+.price-amount.hidden { 
+  display: none; 
+}
+
+/* Style the monthly line inside cards */
+.price-card p.price{
+  margin-top: -90px;
+  background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+  display: inline-block;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Quand on passe en mensuel (on ajoute .is-monthly au wrapper) */
+.price-container.is-monthly .yearly-amount { 
+  display: none; 
+}
+.price-container.is-monthly .monthly-amount { 
+  display: block; 
+}
+
+/* (facultatif) style du toggle */
+.label.selected #year  { 
+  color: var(--rose-clair); 
+}
+
+.label.selected #month { 
+  color: var(--dark-color); 
+}
+
+.label.selected .active { 
+  left: 160px; 
+}
+
+/* au lieu de .price .show_price */
+.show_price { 
+  display: none; 
 }
 
 .price {
@@ -484,7 +533,7 @@ p {
   justify-content: center;
 }
 
-.price-card:nth-child(2) .price-amount {
+.price-card:nth-child(2) .yearly-amount {
   font-weight: 750px;
   font-size: 50px;
 }
@@ -495,7 +544,7 @@ p {
   margin-bottom: 20px;
 }
 
-.price-amount {
+.yearly-amount {
   background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
   -webkit-background-clip: text; /* Safari/Chrome */
           background-clip: text;
@@ -505,6 +554,23 @@ p {
   font-size: 45px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+
+.monthly-amount { 
+  display: none;            /* <-- cache la mensualité par défaut */
+  background: linear-gradient(90deg, #c7b3ff 0%, #f3b5df 50%, #ffd6a5 100%);
+  -webkit-background-clip:text; 
+  background-clip:text;
+  -webkit-text-fill-color:transparent; 
+  color:transparent;
+  font-size: 50px; 
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.monthly-amount span {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .price-hr {

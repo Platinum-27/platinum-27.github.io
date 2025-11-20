@@ -88,18 +88,13 @@ function addAnimation() {
 /*---Pricing button---*/
 const checkbox = document.querySelector('#checkbox');
 const label = document.querySelector('.label');
+const wrapper = document.querySelector('.price-container');
 
-checkbox.addEventListener('change', showPlan);
+checkbox.addEventListener('change', () => {
+  // le “knob” du switch
+  label.classList.toggle('selected', checkbox.checked);
+  // bascule l’affichage: annuel ↔ mensuel
+  wrapper.classList.toggle('is-monthly', checkbox.checked);
+});
 
-function showPlan() {
-  label.classList.toggle('selected')
-  displayPrice();
-}
-
-function displayPrice() {
-  const prices = document.querySelectorAll(".prices");
-
-  prices.forEach(item => {
-    item.classList.toggle('show_price')
-  })
-}
+document.querySelectorAll('.show_price').forEach(el => el.classList.toggle('show_price'));
